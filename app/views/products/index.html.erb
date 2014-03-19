@@ -1,4 +1,14 @@
-<h2> I AMA View </h2>
+<% first_product = Product.first %>
 <p>
-  Find me in <%= Rails.root.join("app", "views", "products", __FILE__ ) %>
+  Product Name: "<%= first_product.name %>"" costs $<%= first_product.price %>
+</p>
+<p>
+  The seller for this product is named '<%= first_product.user.name %>'
+</p
+
+<%= product = Product.where(:name => 'rails book').first %> or <%= cheap_product = Product.where('price > 1').first %>
+
+<p>
+  Product Name: "<%= product.name %>" costs $<%= product.price %> and is sold by <%= product.user.name %>
+  <br>Cheap Product Name: "<%= cheap_product.name %>" costs $<%= cheap_product.price %> and is sold by <%= cheap_product.user.name %>
 </p>
